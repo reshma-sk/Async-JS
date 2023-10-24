@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>setInterval</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <script>
+        let intervalID; // Variable to store the interval ID
+
+        const startInterval = () => {
+            intervalID = setInterval(() => {
+                console.log('jjj');
+            }, 1000);
+        };
+
+        const stopInterval = () => {
+            clearInterval(intervalID); // Clear the interval using the stored ID
+            console.log('stopped');
+        };
+
+        document.getElementById('start').addEventListener('click', startInterval);
+        document.getElementById('stop').addEventListener('click', stopInterval);
+    </script>
+</body>
+
+</html>
+In this code, we store the interval ID in the intervalID variable when starting the interval with setInterval, and then
+we use that ID to clear the interval with clearInterval(intervalID) when the "stop" button is clicked.
